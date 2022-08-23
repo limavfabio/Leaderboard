@@ -1,10 +1,37 @@
+main {
+  display: flex;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.recent-scores-container {
+  margin: auto 30px auto 5px;
+  width: 100%;
+}
+
+.recent-scores-title-container {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.recent-scores-title-container button {
+  padding: 5px 10px;
+  margin-left: auto;
+  align-self: center;
+  height: fit-content;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -14,10 +41,27 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.flex {
-    display: flex;
+.add-score-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 80px;
 }
 
-.column {
-    flex-direction: column;
+.add-score-container h2 {
+  margin-bottom: 20px;
+}
+
+.name-input {
+  margin-bottom: 10px;
+}
+
+.score-input {
+  margin-bottom: 10px;
+}
+
+.add-score-container button {
+  margin-top: 10px;
+  align-self: flex-end;
+  padding: 5px 10px;
 }
