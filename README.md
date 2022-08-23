@@ -1,6 +1,6 @@
 # Project Name
 
-A quick description of the project
+A leaderboard web app made with Javascript
 
 # Built With
 
@@ -8,10 +8,6 @@ A quick description of the project
   - HTML
   - CSS
   - JavaScript
-
-# Getting Started
-
-To get a local copy up and running, follow these simple steps:
 
 ## Usage
 
@@ -21,7 +17,7 @@ Copy this repo and run it on a browser
 
 **Fábio Vinícius Dias Lima**
 
-- GitHub: [@githubhandle](https://github.com/limavfabio)
+- GitHub: (https://github.com/limavfabio)
 
 # Contributing
 
