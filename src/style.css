@@ -1,7 +1,23 @@
-.hello {
-    color: red;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-body {
-    background-color: #f5f5f5;
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
 }
