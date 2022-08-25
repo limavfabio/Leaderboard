@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaderboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Leaderboard</h1>
     <main>
-        <!-- Here will be generated the Scores table and the Add scores inputs -->
+      <div class="recent-scores-container">
+        <div class="recent-scores-title-container">
+          <h2>Recent Scores</h2>
+          <button class="refresh-button">Refresh</button>
+        </div>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+        </table>
+      </div>
+      <div class="add-score-container">
+        <h2>Add your score</h2>
+        <input class="name-input" placeholder="Your name" type="text" />
+        <input class="score-input" placeholder="Your score" type="number" />
+        <button class="submit-button">Submit</button>
+      </div>
     </main>
-</body>
+  </body>
 </html>
