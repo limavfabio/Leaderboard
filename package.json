@@ -2,7 +2,6 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "twstart": "tailwindcss -i ./src/style.css -o ./dist/output.css --watch",
     "start": "webpack serve --mode=development --open",
     "build": "export NODE_ENV=production && webpack"
   },
@@ -32,7 +31,8 @@
   },
   "dependencies": {
     "jest": "^28.1.3",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.2.10"
   },
   "name": "leaderboard",
   "description": "A leaderboard web app made with Javascript",
