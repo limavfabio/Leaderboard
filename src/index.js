@@ -20,7 +20,7 @@ const printScores = () => {
         (items) => `<tr>
         <td>${items.user}</td>
         <td>${items.score}</td>
-        </tr>`
+        </tr>`,
       )
       .join(' ');
   });
@@ -37,6 +37,5 @@ submitButton.addEventListener('click', () => {
     user: nameInput.value,
     score: scoreInput.value,
   };
-  console.log(requestBody);
   postScore(gamesApi, requestBody);
 });

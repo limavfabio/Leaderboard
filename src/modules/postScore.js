@@ -7,7 +7,6 @@ async function postScore(url, body) {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  console.log(response);
   return response.json();
 }
 
