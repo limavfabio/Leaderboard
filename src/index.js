@@ -1,14 +1,19 @@
 import './style.css';
-import * as dom from './modules/DOM.js';
 import fetchScores from './modules/fetchScores.js';
+import postScore from './modules/postScore.js';
 
 const gameId = 'gE1zkIUmQuffiG69WajW';
 const gamesApi = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`;
-
-document.querySelector('main').innerHTML += dom.scoresTable;
-document.querySelector('main').innerHTML += dom.addScoresContainer;
+const submitButton = document.querySelector('.submit-button');
+const nameInput = document.querySelector('.name-input');
+const scoreInput = document.querySelector('.score-input');
+const refreshButton = document.querySelector('.refresh-button');
 
 const printScores = () => {
+  document.querySelector('table').innerHTML = `<tr>
+  <th>Name</th>
+  <th>Score</th>
+</tr>`;
   fetchScores(gamesApi).then((scores) => {
     document.querySelector('table').innerHTML += scores.result
       .map(
@@ -22,3 +27,16 @@ const printScores = () => {
 };
 
 printScores();
+
+refreshButton.addEventListener('click', () => {
+  printScores();
+});
+
+submitButton.addEventListener('click', () => {
+  const requestBody = {
+    user: nameInput.value,
+    score: scoreInput.value,
+  };
+  console.log(requestBody);
+  postScore(gamesApi, requestBody);
+});

@@ -1,26 +1,14 @@
-import fetch from 'node-fetch';
-
-function scoreBody(user, score) {
-  return {
-    user: user,
-    score: score,
-  };
-}
-
-const gameId = 'gE1zkIUmQuffiG69WajW';
-async function postScore(user, score) {
-  const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`;
+// a function that posts the score to the API
+async function postScore(url, body) {
   const response = await fetch(url, {
     method: 'POST',
-    mode: 'cors',
-    cache: 'no-cache',
-    credentials: 'same-origin',
-    redirect: 'follow',
-    referrerPolicy: 'no-referrer',
+    body: JSON.stringify(body),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-    body: scoreBody(user, score),
   });
+  console.log(response);
   return response.json();
 }
+
+export default postScore;
