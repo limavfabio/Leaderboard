@@ -9,9 +9,18 @@ A leaderboard web app made with Javascript
   - CSS
   - JavaScript
 
-## Usage
+## Getting Started
 
-Copy this repo and run it on a browser
+- Clone this repo
+- Install dependencies 
+```
+npm install
+```
+- Run build script
+```
+npm run build
+```
+- You can find the built web app on ./dist
 
 # Authors
 
