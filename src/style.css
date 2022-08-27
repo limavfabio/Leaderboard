@@ -1,8 +1,23 @@
+body {
+  background-image: url(./assets/main-bg.jpg);
+  background-size: cover;
+}
+
 main {
   display: flex;
+  margin: auto 15% auto 10%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: aliceblue;
+  text-align: center;
 }
 
 h2 {
+  font-size: 2rem;
+  color: aliceblue;
   margin: 0;
   padding: 0;
 }
@@ -17,12 +32,6 @@ h2 {
   display: flex;
 }
 
-.recent-scores-title-container button {
-  padding: 5px 10px;
-  margin-left: auto;
-  align-self: center;
-}
-
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -31,13 +40,23 @@ table {
 
 td,
 th {
-  border: 1px solid #ddd;
   text-align: left;
-  padding: 8px;
+  padding: 10px;
+  color: #fefae0;
+  backdrop-filter: blur(2px);
+}
+
+tr:nth-child(odd) {
+  background-color: #221f247c;
 }
 
 tr:nth-child(even) {
-  background-color: #ddd;
+  background-color: #723c2585;
+}
+
+th {
+  background-color: #2c1e187a;
+  border: 2px solid whitesmoke;
 }
 
 .add-score-container {
@@ -51,6 +70,31 @@ tr:nth-child(even) {
   margin-bottom: 20px;
 }
 
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f295446b;
+  backdrop-filter: blur(2px);
+  color: #fefae0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: auto;
+  align-self: center;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #f29544;
+}
+
+input {
+  padding: 8px;
+  background-color: antiquewhite;
+  border: none;
+}
+
 .name-input {
   margin-bottom: 10px;
 }
@@ -62,5 +106,4 @@ tr:nth-child(even) {
 .add-score-container button {
   margin-top: 10px;
   align-self: flex-end;
-  padding: 5px 10px;
 }
