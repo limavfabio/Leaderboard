@@ -20,7 +20,7 @@ const printScores = () => {
         (items) => `<tr>
         <td>${items.user}</td>
         <td>${items.score}</td>
-        </tr>`
+        </tr>`,
       )
       .join(' ');
   });
@@ -43,7 +43,7 @@ submitButton.addEventListener('click', () => {
   } else {
     const requestBody = {
       user: nameInput.value,
-      score: parseInt(scoreInput.value),
+      score: parseInt(scoreInput.value, 10),
     };
     postScore(gamesApi, requestBody);
   }
