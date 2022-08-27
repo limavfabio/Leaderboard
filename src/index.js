@@ -33,9 +33,18 @@ refreshButton.addEventListener('click', () => {
 });
 
 submitButton.addEventListener('click', () => {
-  const requestBody = {
-    user: nameInput.value,
-    score: scoreInput.value,
-  };
-  postScore(gamesApi, requestBody);
+  if (nameInput.value === '' || scoreInput.value === '') {
+    nameInput.style.outline = '2px solid red';
+    scoreInput.style.outline = '2px solid red';
+    setTimeout(() => {
+      nameInput.style.outline = 'none';
+      scoreInput.style.outline = 'none';
+    }, 2000);
+  } else {
+    const requestBody = {
+      user: nameInput.value,
+      score: parseInt(scoreInput.value, 10),
+    };
+    postScore(gamesApi, requestBody);
+  }
 });
