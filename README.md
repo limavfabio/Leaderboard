@@ -9,6 +9,9 @@ A leaderboard web app made with Javascript
   - CSS
   - JavaScript
 
+- Bundler
+  - Webpack
+
 ## Getting Started
 
 - Clone this repo
@@ -32,10 +35,8 @@ npm run build
 
 # Live Demo
 
+https://limavfabio.github.io/Leaderboard/dist/
+
 # Show your support
 
 Kindly give a :hearts: if you like this.
-
-# Acknowledgement
-
-- We expresse our gratitude for everyone.
